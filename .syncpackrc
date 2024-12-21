@@ -1,0 +1,20 @@
+{
+  "dependencyTypes": ["dev", "local", "overrides", "prod", "resolutions"],
+  "semverGroups": [
+    {
+      "dependencies": ["**"],
+      "dependencyTypes": ["dev", "prod"],
+      "label": "Use exact version numbers in production",
+      "packages": ["**"],
+      "range": ""
+    }
+  ],
+  "versionGroups": [
+    {
+      "dependencies": ["$LOCAL"],
+      "dependencyTypes": ["dev", "prod"],
+      "label": "Use workspace protocol when developing local packages",
+      "pinVersion": "workspace:*"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+commit-msg:
+  parallel: true
+  scripts:
+    "commitlint.sh":
+      runner: bash
+
+pre-commit:
+  commands:
+    check-code:
+      glob: "*.{js,ts,vue,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      run: npx biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+
+    check-mismatches:
+      run: npm run lint:mismatches
+
+    check-semver:
+      run: npm run lint:semver-ranges
