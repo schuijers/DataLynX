@@ -1,0 +1,38 @@
+{
+  "name": "@datalynx/irods-client",
+  "version": "0.0.0",
+  "description": "DataLynX client for the iRODS HTTP API",
+  "license": "MIT",
+  "author": "Martijn Schuijers <https://github.com/schuijers>",
+  "repository": {
+    "directory": "libs/irods-client",
+    "type": "git",
+    "url": "git+https://github.com/schuijers/DataLynX.git"
+  },
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "files": ["/dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "biome check --formatter-enabled=false .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "buffer": "6.0.3",
+    "ofetch": "1.4.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@faker-js/faker": "9.3.0",
+    "msw": "2.7.0",
+    "tsup": "8.3.5",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  }
+}

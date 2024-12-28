@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "lib": ["esnext"],
+    "module": "nodenext",
+    "outDir": "./dist",
+    "rootDir": "src",
+    "target": "esnext"
+  },
+  "exclude": ["**/*.test.ts"],
+  "extends": ["../../tsconfig"],
+  "include": ["src"]
+}
