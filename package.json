@@ -5,6 +5,10 @@
   "description": "Monorepo for the DataLynX platform",
   "license": "MIT",
   "author": "Martijn Schuijers <https://github.com/schuijers>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schuijers/DataLynX.git"
+  },
   "type": "module",
   "scripts": {
     "build": "turbo run build",
